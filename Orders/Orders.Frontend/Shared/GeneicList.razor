@@ -1,0 +1,31 @@
+﻿@typeparam Titem
+
+@if(MyList == null)
+{
+    @if(Loading is null)
+    {
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="https://cssbud.com/wp-content/uploads/2022/05/pendulum.gif" alt="Loadign..." />
+        </div>
+    }
+    else
+    {
+        @Loading
+    }
+}
+else if(MyList.Count == 0)
+{
+    @if(NoRecords is null)
+    {
+        <p>No hay registros para mostrar...</p>
+    }
+    else
+    {
+        @NoRecords
+    }
+
+}
+else
+{
+    @Body
+}
